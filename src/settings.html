@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hummy IDE</title>
+    <link rel="stylesheet" href="css/photon.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="window">
+      <header class="toolbar toolbar-footer">
+        <div class="toolbar-actions">
+          <h1 class="title">Settings</h1>
+        </div>
+      </header>
+
+      <div class="window-content">
+        <div class="padded-more">
+          <div class="form-group">
+            <label>Text size (in pixels)</label>
+            <input id="textSize" value="12" type="number" class="form-control" placeholder="Size">
+          </div>
+          <button id="reset" class="btn btn-large btn-warning">Reset</button>
+          <p><p>
+            <select id="selcTheme" class="form-control">
+              <option value="chrome" selected="selected">Chrome</option>
+              <option value="github">Github</option>
+              <option value="monokai">Monokai</option>
+              <option value="clouds">Clouds</option>
+              <option value="eclipse">Eclipse</option>
+              <option value="xcode">Xcode</option>
+              <option value="one_dark">One dark</option>
+              <option value="nord_dark">Nord dark</option>
+            </select>
+        </div>
+      </div>
+
+      <footer class="toolbar toolbar-header">
+        <div style="padding: 4px">
+          <button id="cancel" class="btn btn-large btn-primary pull-left">
+            <span class="icon icon-minus-circled icon-text"></span>
+            Cancel
+          </button>
+          <button id="close" class="btn btn-large btn-primary pull-right">
+            <span class="icon icon-plus-circled icon-text"></span>
+            Save
+          </button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hummy IDE</title>
+    <link rel="stylesheet" href="css/photon.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="window">
+      <header class="toolbar toolbar-header">
+        <h1 id="title" class="title">Welcome</h1>
+
+        <div class="toolbar-actions">
+          <div class="btn-group">
+            <button id="home" class="btn btn-large btn-default active">
+              <span class="icon icon-home"></span>
+            </button>
+            <button id="open_file" class="btn btn-large btn-default">
+              <span class="icon icon-folder"></span>
+            </button>
+          </div>
+
+          <button id="settings" class="btn btn-large btn-default pull-right">
+            <span class="icon icon-cog"></span>
+          </button>
+
+          <button id="run" class="btn btn-large btn-positive pull-right">
+            <span class="icon icon-play"></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="window-content">
+        <div class="pane-group">
+          <div class="pane">
+            <div class="tab-group">
+              <div id="tab" class="tab-item">
+                No file selected
+              </div>
+              <div id="welcome_tab" class="tab-item active">
+                Welcome
+              </div>
+              <div id="welcome_close" class="tab-item tab-item-fixed">
+                <span class="icon icon-cancel"></span>
+              </div>
+            </div>
+
+            <div class="padded-more">
+              <div id="welcome">
+                <h1>Welcome to Hummy IDE!</h1>
+                <p>This is small IDE. It may use as editor for javascript.
+                The editor show errors and warnings, have simpe syntaxis highlighting.</p>
+                <button class="btn btn-large btn-positive pull-right">
+                  <span class="icon icon-rocket icon-text"></span>
+                  Thanks for download Hummy.
+                </button>
+              </div>
+            </div>
+
+            <textarea id="editorText">12345</textarea>
+            <textarea id="currentText"></textarea>
+            <textarea id="fileEx"></textarea>
+            <textarea id="themeCurrent">chrome</textarea>
+            <textarea id="text_size">12</textarea>
+            <div id="editor"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="reset">
+        <div id="resetConsole">
+          <button class="btn btn-large btn-positive code">
+            Clear console
+          </button>
+        </div>
+        <div id="resetCode">
+          <button class="btn btn-large btn-positive code">
+            Clear code
+          </button>
+        </div>
+      </div>
+      <div id="display" class="toolbar toolbar-footer">
+        <ul id="display-logs"></ul>
+      </div>
+
+      <footer class="toolbar toolbar-footer">
+        <div class="toolbar-actions">
+          <button id="reload" class="btn btn-large btn-default">
+            <span class="icon icon-arrows-ccw icon-text"></span>
+            Reload
+          </button>
+
+          <div id="save">
+            <button id="create_file" class="btn btn-large btn-primary pull-right">
+              <span class="icon icon-upload icon-text"></span>
+              Save
+            </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="ace/ace.js"></script>
+    <script src="ace/ext-language_tools.js"></script>
+    <script src="editor/load.js"></script>
+    <script src="editor/console.js"></script>
+  </body>
+</html>
