@@ -2,6 +2,9 @@ const { app, BrowserWindow, ipcMain, dialog, Notification, Menu } = require('ele
 const path = require('path')
 const fs = require('fs')
 
+if(require('electron-squirrel-startup')) return;
+require('update-electron-app')()
+
 const handleError = (error) => {
   new Notification({
     title: error,
@@ -86,6 +89,8 @@ function createWindow () {
     show: false,
     icon: path.join(__dirname, 'img/icon.ico'),
     webPreferences: {
+      worldSafeExecuteJavaScript: true,
+      contextIsolation: true,
       preload: path.join(__dirname, 'render.js')
     }
   })

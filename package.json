@@ -1,22 +1,38 @@
 {
   "name": "hummy-ide",
   "productName": "Hummy IDE",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "description": "Small IDE for Js language",
+  "homepage": "https://github.com/HummyMolecula/Hummy-IDE#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HummyMolecula/Hummy-IDE.git"
+  },
   "main": "src/main.js",
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "build-installer": "electron-builder"
+    "start": "electron .",
+    "make-win": "electron-builder --win --x64",
+    "make-win_ia32": "electron-builder --win --ia32",
+    "make-linux": "electron-builder --linux --x64",
+    "make-linux_ia32": "electron-builder --linux --ia32",
+    "make-mac": "electron-builder --mac --x64",
+    "make-mac_ia32": "electron-builder --mac --ia32",
+    "update-contrib": "weallcontribute -o ."
   },
   "build": {
     "appId": "hummy-ide",
+    "mac": {
+      "icon": "src/img/icon-mac.ico",
+      "target": "tar.gz",
+      "category": "public.app-category.utilities"
+    },
+    "linux": {
+      "icon": "src/img/icon.png",
+      "target": "AppImage",
+      "category": "Utility"
+    },
     "win": {
-      "target": [
-        "nsis"
-      ],
+      "target": "nsis",
       "icon": "src/img/icon.ico",
       "requestedExecutionLevel": "requireAdministrator"
     },
@@ -32,43 +48,19 @@
   "keywords": [],
   "author": "Happy molecula",
   "license": "MIT",
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "hummy_ide"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ]
-    }
+  "bugs": {
+    "url": "https://github.com/HummyMolecula/Hummy-IDE/issues"
+  },
+  "engines": {
+    "npm": ">=6.14.4",
+    "node": ">=13.14.0"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "update-electron-app": "^2.0.1"
   },
   "devDependencies": {
-    "electron-builder": "^22.10.5",
-    "@electron-forge/cli": "^6.0.0-beta.63",
-    "@electron-forge/maker-deb": "^6.0.0-beta.63",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
-    "@electron-forge/maker-zip": "^6.0.0-beta.63",
-    "electron": "17.0.0"
+    "electron": "17.0.0",
+    "electron-builder": "22.10.5"
   }
 }
