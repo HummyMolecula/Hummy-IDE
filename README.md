@@ -28,11 +28,43 @@
 ```sh
 npm install
 ```
+This comand install all depencies of this IDE.
+Now you can run it!
 
 ## Usage
 
+To run IDE type
 ```sh
 npm run start
+```
+
+To build IDE type
+
+### Windows
+```sh
+npm run make-win
+```
+Or (for 32bit systems)
+```sh
+npm run make-win_ia32
+```
+
+### Linux
+```sh
+npm run make-linux
+```
+Or (for 32bit systems)
+```sh
+npm run make-linux_ia32
+```
+### MacOS
+This IDE supported only 64bit systems
+```sh
+npm run make-mac
+```
+(I'm not recommend run this)
+```sh
+npm run make-mac_ia32
 ```
 
 ## Author
