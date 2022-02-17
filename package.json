@@ -16,7 +16,6 @@
     "make-linux": "electron-builder --linux --x64",
     "make-linux_ia32": "electron-builder --linux --ia32",
     "make-mac": "electron-builder --mac --x64",
-    "make-mac_ia32": "electron-builder --mac --ia32",
     "update-contrib": "weallcontribute -o ."
   },
   "build": {
