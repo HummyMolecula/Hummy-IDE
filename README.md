@@ -17,7 +17,7 @@
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/99326979?s=400&u=6914eb8103aa67142fff0b53198a1cff31bb0c5d&v=4" />
 </div>
-<h3 align="center">Small IDE for Js language</h1>
+<h3 align="center">Small IDE for Js language</h3>
 
 ### 🏠 [Homepage](https://github.com/HummyMolecula/Hummy-IDE#readme)
 
