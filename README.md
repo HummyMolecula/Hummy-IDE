@@ -65,10 +65,6 @@ This IDE supported only 64bit systems
 ```sh
 npm run make-mac
 ```
-(I'm not recommend run this)
-```sh
-npm run make-mac_ia32
-```
 
 ## Author
 
