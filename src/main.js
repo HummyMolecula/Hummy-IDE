@@ -2,7 +2,7 @@ const { app, BrowserWindow, ipcMain, dialog, Notification, Menu } = require('ele
 const path = require('path')
 const fs = require('fs')
 
-if(require('electron-squirrel-startup')) return;
+if(require('electron-squirrel-startup')) return
 require('update-electron-app')()
 
 const handleError = (error) => {
